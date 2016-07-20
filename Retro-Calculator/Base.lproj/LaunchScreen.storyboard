@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +17,76 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launchscreenBackgroung" translatesAutoresizingMaskIntoConstraints="NO" id="TjZ-Qm-gIv">
+                                <rect key="frame" x="-264" y="-1" width="1128" height="602"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r6U-A0-q99">
+                                <rect key="frame" x="-200" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreenretrocalLbl" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-1c-Rak">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="Ajv-Lr-SE1"/>
+                                            <constraint firstAttribute="width" constant="560" id="BT1-cG-C4v"/>
+                                            <constraint firstAttribute="width" secondItem="nP9-1c-Rak" secondAttribute="height" multiplier="560:89" id="g2L-m2-Tkq"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ajv-Lr-SE1"/>
+                                                <exclude reference="BT1-cG-C4v"/>
+                                                <exclude reference="g2L-m2-Tkq"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreenRobot" translatesAutoresizingMaskIntoConstraints="NO" id="qtf-1h-geS">
+                                        <rect key="frame" x="0.0" y="87" width="600" height="316"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="352" id="33l-4G-F3M"/>
+                                            <constraint firstAttribute="width" secondItem="qtf-1h-geS" secondAttribute="height" multiplier="32:17" id="OgR-Fu-FDu"/>
+                                            <constraint firstAttribute="height" constant="187" id="dMB-1E-60L"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="33l-4G-F3M"/>
+                                                <exclude reference="OgR-Fu-FDu"/>
+                                                <exclude reference="dMB-1E-60L"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreenRockyground" translatesAutoresizingMaskIntoConstraints="NO" id="p4m-qI-q7v">
+                                        <rect key="frame" x="0.0" y="403" width="600" height="177"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="141" id="H6j-lM-8CV"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="H6j-lM-8CV"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="p4m-qI-q7v" secondAttribute="bottom" id="Lsk-X0-t7W"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lsk-X0-t7W"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r6U-A0-q99" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="A2A-gm-Rk5"/>
+                            <constraint firstItem="r6U-A0-q99" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Jle-dS-Zgj"/>
+                            <constraint firstItem="TjZ-Qm-gIv" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ohv-Sq-a6X"/>
+                            <constraint firstAttribute="trailing" secondItem="TjZ-Qm-gIv" secondAttribute="trailing" id="Tc4-bM-bUt"/>
+                            <constraint firstAttribute="bottom" secondItem="TjZ-Qm-gIv" secondAttribute="bottom" id="amf-de-eFj"/>
+                            <constraint firstAttribute="bottom" secondItem="r6U-A0-q99" secondAttribute="bottom" id="dXb-DS-mYS"/>
+                            <constraint firstAttribute="trailing" secondItem="r6U-A0-q99" secondAttribute="trailing" id="dXl-ic-8ze"/>
+                            <constraint firstItem="TjZ-Qm-gIv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xZ6-Rg-vmY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +94,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="launchscreenBackgroung" width="1433" height="957"/>
+        <image name="launchscreenRobot" width="786" height="402"/>
+        <image name="launchscreenRockyground" width="999" height="225"/>
+        <image name="launchscreenretrocalLbl" width="755" height="111"/>
+    </resources>
 </document>
